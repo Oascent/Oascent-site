@@ -82,7 +82,7 @@ nav a:hover {
 }
 
 .hero {
-  padding: 160px 0 80px; /* increased top padding to avoid overlap */
+  padding: 80px 0 80px; /* increased top padding to avoid overlap */
   background: linear-gradient(135deg, #F5F7FA 0%, #E4E8F0 100%);
   text-align: center;
 }
