@@ -1,3 +1,4 @@
+/* ===== MOBILE-FIRST BASE STYLES ===== */
 :root {
   --primary: #6C63FF;
   --dark: #1A1A2E;
@@ -5,265 +6,144 @@
   --gray: #E2E2E2;
 }
 
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
   color: var(--dark);
-  background-color: white;
-  line-height: 1.6;
+  background: white;
+  line-height: 1.5;
+  text-size-adjust: 100%;
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-header {
-  background-color: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+/* ===== TOUCH-FRIENDLY HEADER ===== */
+.mobile-header {
   position: fixed;
+  top: 0;
   width: 100%;
+  padding: 8px 0;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   z-index: 100;
-  padding: 15px 0;
-}
-
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.logo {
-  max-height: 50px;
-  width: auto;
-}
-
-.desktop-nav {
-  display: flex;
-  gap: 30px;
-}
-
-.desktop-nav a {
-  text-decoration: none;
-  color: var(--dark);
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.desktop-nav a:hover {
-  color: var(--primary);
 }
 
 .mobile-menu-btn {
   background: none;
   border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: var(--dark);
-  z-index: 1000;
+  font-size: 1.4rem;
+  padding: 8px 12px;
+  margin-left: 10px;
 }
 
-.hero {
-  padding: 180px 0 100px;
-  background: linear-gradient(135deg, #F5F7FA 0%, #E4E8F0 100%);
-  text-align: center;
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  background: white;
+  padding: 15px;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.1);
 }
 
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+.mobile-nav.active {
+  display: block;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  max-width: 700px;
-  margin: 0 auto 30px;
-  opacity: 0.8;
-}
-
-.services {
-  padding: 100px 0;
-  background-color: white;
-}
-
-.services h2 {
-  text-align: center;
-  margin-bottom: 50px;
-  font-size: 2rem;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.service-card {
-  background: var(--light);
-  padding: 30px;
-  border-radius: 10px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.service-card i {
-  font-size: 2.5rem;
-  color: var(--primary);
-  margin-bottom: 20px;
-}
-
-.service-card h3 {
-  margin-bottom: 10px;
-}
-
-.about {
-  padding: 100px 0;
-  background: linear-gradient(135deg, #E4E8F0 0%, #F5F7FA 100%);
-  text-align: center;
-}
-
-.about p {
-  max-width: 700px;
-  margin: 0 auto;
+.mobile-nav a {
+  display: block;
+  padding: 12px;
   font-size: 1.1rem;
 }
 
-.contact {
-  padding: 100px 0;
-  background-color: white;
-}
-
-.contact h2 {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.contact form {
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.contact input,
-.contact textarea {
-  padding: 15px;
-  border: 1px solid var(--gray);
-  border-radius: 5px;
-  font-family: 'Inter', sans-serif;
-}
-
-.contact textarea {
-  min-height: 150px;
-}
-
-footer {
-  background-color: var(--dark);
-  color: white;
-  padding: 30px 0;
+/* ===== HERO WITH OPTIMIZED LOGO ===== */
+.hero {
+  padding: 80px 0 40px;
   text-align: center;
 }
 
-.mobile-menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--dark);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s;
-  z-index: 999;
+.hero-logo {
+  width: 160px;
+  height: auto;
+  margin: 0 auto 15px;
+  display: block;
 }
 
-.mobile-menu-overlay.active {
-  opacity: 1;
-  visibility: visible;
+.hero h1 {
+  font-size: 1.8rem;
+  line-height: 1.3;
+  margin: 0 auto 15px;
+  max-width: 90%;
 }
 
-.mobile-menu-overlay nav {
-  flex-direction: column;
-  text-align: center;
+.hero-subtext {
+  font-size: 1rem;
+  max-width: 90%;
+  margin: 0 auto 25px;
 }
 
-.mobile-menu-overlay a {
-  color: white;
-  font-size: 1.5rem;
-  margin: 10px 0;
+/* ===== TOUCH-FRIENDLY SERVICES ===== */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  padding: 0 10px;
+}
+
+.service-card {
+  padding: 20px;
+  min-height: 180px;
+}
+
+/* ===== MEDIA QUERIES FOR LARGER SCREENS ===== */
+@media (min-width: 768px) {
+  .hero {
+    padding: 120px 0 60px;
+  }
+  
+  .hero-logo {
+    width: 200px;
+    margin-bottom: 25px;
+  }
+  
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .hero-logo {
+    width: 220px;
+  }
+}
+
+/* ===== PERFORMANCE OPTIMIZATIONS ===== */
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .cta-button {
   display: inline-block;
-  padding: 12px 30px;
-  background-color: var(--primary);
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: 600;
-  transition: background-color 0.3s;
+  padding: 12px 24px;
+  min-width: 140px;
 }
 
-.cta-button:hover {
-  background-color: #5A52E0;
-}
-
-@media (max-width: 768px) {
-  .desktop-nav {
-    display: none;
-  }
-
-  .logo {
-    max-height: 40px;
-  }
-
-  .hero h2 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-  }
-/* Default size for desktop */
-.hero_logo {
-  width: 200px;
-  margin-bottom: 20px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  .hero_logo {
-    width: 160px; /* Slightly smaller on mobile */
-    margin-bottom: 15px; /* Tighter spacing */
-  }
-}
-
-/* Small phones adjustment */
-@media (max-width: 480px) {
-  .hero_logo {
-    width: 140px;
-  }
+/* ===== TOUCH TARGETS ===== */
+a, button {
+  min-width: 44px;
+  min-height: 44px;
 }
