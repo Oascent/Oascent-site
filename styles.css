@@ -29,13 +29,16 @@ header {
   width: 100%;
   z-index: 100;
 }
-
 .logo {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
+.logo img {
+  height: 50px;
+  width: auto;
+}
 .logo h1 {
   font-weight: 700;
   margin: 0;
