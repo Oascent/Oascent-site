@@ -1,29 +1,31 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Oascent Automation | AI-Powered Marketing for Small Businesses</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
-<header>
-  <div class="container header-wrapper">
-    <img src="OascentLogo.png" alt="Oascent Automation Logo" class="site-logo">
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <button class="mobile-menu-btn" aria-label="Menu">
-      <i class="fas fa-bars"></i>
-    </button>
-  </div>
-</header>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <img src="OascentLogo.png" alt="Oascent Automation Logo" class="site-logo" />
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
   <section class="hero">
     <div class="container">
       <h2>AI-Powered Marketing for Small Businesses</h2>
@@ -31,6 +33,7 @@
       <a href="#contact" class="cta-button">Get Started</a>
     </div>
   </section>
+
   <section id="services" class="services">
     <div class="container">
       <h2>Our Services</h2>
@@ -70,25 +73,26 @@
     <div class="container">
       <h2>Let’s Work Together</h2>
       <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Oascenttech@gmail.com" required>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Oascenttech@gmail.com" required />
         <textarea placeholder="How can we help?" required></textarea>
         <button type="submit" class="cta-button">Send Message</button>
       </form>
     </div>
   </section>
-<footer>
-  <div class="container">
-    <div class="logo">
-      <img src="OascentLogo.png" alt="Oascent Automation Logo" width="120">
-      <div>
-        <h1>OASCENT</h1>
-        <span>AUTOMATION</span>
+
+  <footer>
+    <div class="container">
+      <div class="logo">
+        <img src="OascentLogo.png" alt="Oascent Automation Logo" width="120" />
+        <div>
+          <h1>OASCENT</h1>
+          <span>AUTOMATION</span>
+        </div>
       </div>
+      <p>&copy; 2023 Oascent Automation. All rights reserved.</p>
     </div>
-    <p>&copy; 2023 Oascent Automation. All rights reserved.</p>
-  </div>
-</footer>
+  </footer>
 
   <div class="mobile-menu-overlay">
     <nav>
@@ -99,9 +103,10 @@
   </div>
 
   <script>
-    document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+    document.querySelector('.mobile-menu-btn').addEventListener('click', function () {
       document.querySelector('.mobile-menu-overlay').classList.toggle('active');
     });
   </script>
+
 </body>
 </html>
