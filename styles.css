@@ -244,3 +244,26 @@ footer {
     font-size: 1rem;
   }
   }
+/* Default size for desktop */
+.hero_logo {
+  width: 200px;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .hero_logo {
+    width: 160px; /* Slightly smaller on mobile */
+    margin-bottom: 15px; /* Tighter spacing */
+  }
+}
+
+/* Small phones adjustment */
+@media (max-width: 480px) {
+  .hero_logo {
+    width: 140px;
+  }
+}
