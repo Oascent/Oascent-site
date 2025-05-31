@@ -30,10 +30,21 @@ header {
   padding: 15px 0;
 }
 
+/* ---- Mobile-Optimized Header Title ---- */
+.header-title {
+  font-size: 1rem; /* Perfect mobile size */
+  margin: 0;
+  text-align: center;
+  flex-grow: 1;
+  padding: 0 5px;
+  font-weight: 600; /* Slightly bolder */
+  white-space: nowrap; /* Prevents line break */
+}
+
+/* ---- Keep Hamburger Button Aligned ---- */
 header .container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items: center; /* Vertically centers all items */
 }
 
 .logo-container {
@@ -258,3 +269,9 @@ footer {
     font-size: 1rem;
   }
   }
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 0.9rem; /* Slightly smaller on very small screens */
+  }
+}
+
