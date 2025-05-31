@@ -37,15 +37,23 @@ header .container {
 }
 
 .logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+  text-align: center;
+  padding: 20px 0;
 }
 
 .logo {
-  max-height: 80px;
-  width: auto;
+  width: 200px;
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsive tweak for very small screens */
+@media (max-width: 480px) {
+  .logo {
+    width: 150px;
+  }
 }
 
 .desktop-nav {
