@@ -39,9 +39,20 @@ header {
 /* 🔽 Optional wrapper for layout */
 .header-wrapper {
   display: flex;
-  align-items: flex-start; /* align top */
-  justify-content: space-between;
-  padding: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 10px 0;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+}
+
+.site-logo {
+  height: 100px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 nav {
