@@ -39,9 +39,9 @@ header {
 /* 🔽 Optional wrapper for layout */
 .header-wrapper {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* align top */
   justify-content: space-between;
-  padding: 10px 0;
+  padding: 0;
 }
 
 nav {
