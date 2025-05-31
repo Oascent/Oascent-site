@@ -259,8 +259,10 @@ footer .logo span {
 
   .hero p {
     font-size: 1rem;
-    
-  }.site-logo {
-    max-height: 60px;
-    }
+  }
+
+  .site-logo {
+    max-height: 60px !important;
+    width: auto;
+  }
 }
