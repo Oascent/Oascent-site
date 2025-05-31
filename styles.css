@@ -30,24 +30,21 @@ header {
   z-index: 100;
 }
 
+/* Replace the existing .logo styles */
 .logo {
   display: flex;
   align-items: center;
-  gap: 8px;
 }
 
-.logo h1 {
-  font-weight: 700;
-  margin: 0;
-  font-size: 1.5rem;
+.logo img {
+  height: 40px; /* Adjust size as needed */
+  width: auto;
 }
 
-.logo span {
-  font-weight: 300;
-  opacity: 0.8;
-}
-
-nav {
+/* Optional: Add a hover effect */
+.logo img:hover {
+  opacity: 0.9;
+}nav {
   display: flex;
   gap: 30px;
 }
