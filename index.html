@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,81 +12,16 @@
 </head>
 <body>
   <header>
-      <nav>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <button class="mobile-menu-btn" aria-label="Menu">
-        <i class="fas fa-bars"></i>
-      </button>
-         <img src="OL2.png" alt="My photo" style="width: 40%; max-width: 330px;">
+    <img src="OL2.png" alt="Oascent Logo" class="logo-img">
+    <nav class="desktop-nav">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="mobile-menu-btn" aria-label="Menu">
+      <i class="fas fa-bars"></i>
+    </button>
   </header>
-
-  <section class="hero">
-    <div class="container">
-      <h2>AI-Powered Marketing for Small Businesses</h2>
-      <p>Automate your brand’s growth with cutting-edge design, web development, and social media strategies.</p>
-      <a href="#contact" class="cta-button">Get Started</a>
-    </div>
-  </section>
-
-  <section id="services" class="services">
-    <div class="container">
-      <h2>Our Services</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <i class="fas fa-paint-brush"></i>
-          <h3>Logo & Banner Design</h3>
-          <p>AI-generated branding that stands out.</p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-code"></i>
-          <h3>Website Building</h3>
-          <p>Fast, mobile-friendly sites tailored to your business.</p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-chart-line"></i>
-          <h3>Market Trend Analysis</h3>
-          <p>Data-driven insights to keep you ahead.</p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-robot"></i>
-          <h3>Social Media Automation</h3>
-          <p>AI-curated posts for consistent engagement.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="about">
-    <div class="container">
-      <h2>Why Choose Us?</h2>
-      <p>Oascent Automation combines <strong>AI efficiency</strong> with <strong>human creativity</strong> to deliver affordable, high-quality marketing solutions for small businesses.</p>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2>Let’s Work Together</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="How can we help?" required></textarea>
-        <button type="submit" class="cta-button">Send Message</button>
-      </form>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <div class="logo">
-        <h1>OASCENT</h1>
-        <span>AUTOMATION</span>
-      </div>
-      <p>&copy; 2023 Oascent Automation. All rights reserved.</p>
-    </div>
-  </footer>
 
   <div class="mobile-menu-overlay">
     <nav>
@@ -97,9 +31,19 @@
     </nav>
   </div>
 
+  <!-- [Rest of your existing HTML sections] -->
+
   <script>
+    // Mobile menu toggle
     document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
       document.querySelector('.mobile-menu-overlay').classList.toggle('active');
+    });
+    
+    // Close menu when clicking links
+    document.querySelectorAll('.mobile-menu-overlay a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.mobile-menu-overlay').classList.remove('active');
+      });
     });
   </script>
 </body>
