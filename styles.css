@@ -243,7 +243,6 @@ footer .logo span {
 .cta-button:hover {
   background-color: #5A52E0;
 }
-
 @media (max-width: 768px) {
   nav {
     display: none;
@@ -262,7 +261,7 @@ footer .logo span {
   }
 
   .site-logo {
-    max-height: 60px !important;
+    max-height: 90px !important;
     width: auto;
   }
 }
