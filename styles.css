@@ -34,24 +34,31 @@ header {
   padding: 15px 0;
 }
 
+/* Replace the existing .logo styles with these */
 .logo {
   display: flex;
   align-items: center;
-  gap: 8px;
 }
 
-.logo h1 {
-  font-weight: 700;
-  margin: 0;
-  font-size: 1.5rem;
-  letter-spacing: 1px;
+.logo-img {
+  height: 40px; /* Adjust this to your preferred size */
+  width: auto;
+  transition: opacity 0.3s;
 }
 
-.logo span {
-  font-weight: 300;
+.logo-img:hover {
   opacity: 0.8;
-  font-size: 1rem;
 }
+
+/* Adjust header padding if needed */
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+/* Keep all other existing styles the same */
 
 nav {
   display: flex;
