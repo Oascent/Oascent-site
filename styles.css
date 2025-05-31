@@ -23,11 +23,11 @@ body {
 }
 
 header {
-  background-color: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  width: 100%;
-  z-index: 100;
+    position: relative; /* Add this line */
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    z-index: 100;
 }
 
 .logo {
@@ -249,4 +249,11 @@ footer .logo span {
   .hero p {
     font-size: 1rem;
   }
+}
+/* Only move the hamburger icon */
+.mobile-menu-btn {
+    position: absolute;
+    right: 20px; /* Adjust distance from right edge */
+    top: 50%;
+    transform: translateY(-50%);
 }
