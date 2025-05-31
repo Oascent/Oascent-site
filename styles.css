@@ -21,38 +21,32 @@ body {
   padding: 0 20px;
 }
 
+/* ✅ Fixed Header */
 header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 120px;
   background-color: white;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  width: 100%;
   z-index: 100;
-}
-
-/* ✅ Unified logo class */
-.site-logo {
-  height: 100px;
-  width: auto;
-  display: block;
-}
-
-/* 🔽 Optional wrapper for layout */
-.header-wrapper {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 40px;
-  padding: 10px 0;
-  flex-wrap: wrap;
-  flex-direction: column;
-  text-align: center;
+}
+
+.header-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .site-logo {
   height: 100px;
-  width: auto;
   display: block;
-  margin: 0 auto;
 }
 
 nav {
@@ -81,8 +75,9 @@ nav a:hover {
   cursor: pointer;
 }
 
+/* ✅ Hero Section offset for fixed header */
 .hero {
-  padding: 80px 0 80px; /* increased top padding to avoid overlap */
+  padding: 160px 0 80px;
   background: linear-gradient(135deg, #F5F7FA 0%, #E4E8F0 100%);
   text-align: center;
 }
@@ -245,6 +240,13 @@ footer .logo span {
 
 /* 🔁 Responsive adjustments */
 @media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+    padding: 20px;
+  }
+
   nav {
     display: none;
   }
@@ -253,15 +255,11 @@ footer .logo span {
     display: block;
   }
 
-  .hero h2 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
   .site-logo {
     height: 90px;
+  }
+
+  .hero {
+    padding-top: 200px;
   }
 }
