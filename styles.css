@@ -41,7 +41,7 @@ header {
 }
 
 .logo-img {
-  height: 40px; /* Adjust this to your preferred size */
+  height: 60px; /* Adjust this to your preferred size */
   width: auto;
   transition: opacity 0.3s;
 }
