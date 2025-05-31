@@ -233,20 +233,72 @@ footer .logo span {
   background-color: #5A52E0;
 }
 
+/* Mobile-First Fixes */
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo-img {
+  height: 40px; /* Adjust based on your logo */
+  width: auto;
+  z-index: 1000; /* Ensures logo stays above overlay */
+}
+
+/* Mobile menu button */
+.mobile-menu-btn {
+  background: none;
+  border: none;
+  color: var(--dark);
+  font-size: 1.8rem;
+  z-index: 1001;
+  display: none; /* Hidden by default on desktop */
+}
+
+/* Mobile menu overlay adjustments */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.95);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-menu-overlay nav {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.mobile-menu-overlay a {
+  color: white;
+  font-size: 1.4rem;
+}
+
+/* Show mobile button and hide desktop nav on mobile */
 @media (max-width: 768px) {
-  nav {
+  .desktop-nav {
     display: none;
   }
-
+  
   .mobile-menu-btn {
     display: block;
   }
-
-  .hero h2 {
-    font-size: 2rem;
+  
+  /* Improve touch targets */
+  a, button {
+    min-width: 44px;
+    min-height: 44px;
   }
-
-  .hero p {
-    font-size: 1rem;
+  
+  /* Prevent zoom on input focus */
+  input, textarea {
+    font-size: 16px;
   }
 }
