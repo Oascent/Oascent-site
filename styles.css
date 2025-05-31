@@ -227,6 +227,20 @@ footer {
   background-color: #5A52E0;
 }
 
+/* Mobile Header Title */
+.header-title {
+  font-size: 1.2rem;
+  margin: 0;
+  text-align: center;
+  flex-grow: 1; /* Pushes nav links to the right */
+  padding: 0 10px; /* Prevents text squishing */
+}
+
+/* Bigger Logo (Hero Section) */
+.hero .logo {
+  max-height: 70px !important;
+}
+
 @media (max-width: 768px) {
   .desktop-nav {
     display: none;
